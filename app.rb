@@ -23,3 +23,8 @@ end
 get '/markdown_template_page' do
   markdown :markdown_template_page
 end
+
+# erbとMarkdownを組み合わせる
+get '/erb_and_md_template_page' do
+  erb :erb_and_md_template_page, :locals => { :md => markdown(:erb_and_md_template_page) }
+end
