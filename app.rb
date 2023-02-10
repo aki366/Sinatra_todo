@@ -8,6 +8,13 @@ get '/' do
   "http://localhost:4567/[name].html"
 end
 
+get '/top' do
+  "hello!!"
+  "http://localhost:4567/top.html"
+  "http://localhost:4567/path/to"
+  "http://localhost:4567/[name].html"
+end
+
 get '/path/to' do
   "this is [/path/to]"
 end
