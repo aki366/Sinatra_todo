@@ -9,10 +9,19 @@ get '/' do
 end
 
 get '/top' do
-  "hello!!"
-  "http://localhost:4567/top.html"
-  "http://localhost:4567/path/to"
-  "http://localhost:4567/[name].html"
+  erb :top
+end
+
+get '/new' do
+  erb :new
+end
+
+get '/show' do
+  erb :show
+end
+
+get '/edit' do
+  erb :edit
 end
 
 get '/path/to' do
