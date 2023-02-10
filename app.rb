@@ -2,9 +2,9 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  'hello!!'
-  'http://localhost:4567/top.html'
-  'http://localhost:4567/path/to'
+  "hello!!"
+  "http://localhost:4567/top.html"
+  "http://localhost:4567/path/to"
   "http://localhost:4567/[name].html"
 end
 
@@ -18,4 +18,8 @@ end
 
 get '/erb_template_page' do
   erb :erb_template_page
+end
+
+get '/markdown_template_page' do
+  markdown :markdown_template_page
 end
