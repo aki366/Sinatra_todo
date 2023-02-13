@@ -1,1 +1,16 @@
-top
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <h2>メモアプリ</h2>
+  </head>
+
+  <body>
+    <ul>
+      <% @memos.each do |id, post| %>
+        <li>
+          <%= post["title"] %>
+        </li>
+      <% end %>
+    </ul>
+  </body>
+</html>
