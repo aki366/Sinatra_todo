@@ -6,16 +6,17 @@
 
   <body>
     <div>
-      <form action="/memos" method="post">
+      <form action="/memos/<%= params[:id] %>" method="post">
         <div class="memo-title">
           <label for="title" class="form-label"></label>
-          <input type="text" id="title" name="title" class="form-control">
+          <input type="text" id="title" name="title" value="<%= @title %>" class="form-control">
         </div>
         <div class="memo-content">
           <label for="content" class="form-label"></label>
-          <textarea id="content" name="content" class="form-control"></textarea>
+          <textarea id="content" name="content" class="form-control"><%= @content %></textarea>
         </div>
         <div>
+          <input type="hidden" name="_method" value="patch">
           <input type="submit" value="変更" class="btn btn-primary">
         </div>
       </form>
