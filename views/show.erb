@@ -1,13 +1,12 @@
-show
-<link rel="stylesheet" href="/style.css" />
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <h2>メモアプリ</h2>
+  </head>
 
-<html>
-<head>
-  <title>show memo</title>
-</head>
-<body>
-  <h1>メモアプリ</h1>
-  <%= メモ "/show/#{@memo.id}" %>
-  <p>メモの内容</p>
-</body>
+  <body>
+    <div>
+      <p><%= @title %></p>
+      <p><%= @content %></p>
+  </body>
 </html>

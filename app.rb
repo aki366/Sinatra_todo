@@ -24,7 +24,10 @@ get '/new' do
   erb :new
 end
 
-get '/show/*' do
+get '/memos/:id' do
+  memos = get_memos(FILE_PATH)
+  @title = memos[params[:id]]['title']
+  @content = memos[params[:id]]['content']
   erb :show
 end
 
