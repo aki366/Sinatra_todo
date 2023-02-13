@@ -1,5 +1,12 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'json'
+
+FILE_PATH = 'public/memos.json'
+
+def get_memos(file_path)
+  File.open(file_path) { |f| JSON.parse(f.read) }
+end
 
 get '/' do
   "hello!!"
