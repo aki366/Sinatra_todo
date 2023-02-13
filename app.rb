@@ -20,7 +20,7 @@ get '/memos' do
   erb :index
 end
 
-get '/new' do
+get '/memos/new' do
   erb :new
 end
 
