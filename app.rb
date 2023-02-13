@@ -8,6 +8,10 @@ def get_memos(file_path)
   File.open(file_path) { |f| JSON.parse(f.read) }
 end
 
+def set_memos(file_path, memos)
+  File.open(file_path, 'w') { |f| JSON.dump(memos, f) }
+end
+
 get '/' do
   "hello!!"
   "http://localhost:4567/top.html"
@@ -29,6 +33,18 @@ get '/memos/:id' do
   @title = memos[params[:id]]['title']
   @content = memos[params[:id]]['content']
   erb :show
+end
+
+post '/memos' do
+  title = params[:title]
+  content = params[:content]
+
+  memos = get_memos(FILE_PATH)
+  id = (memos.keys.map(&:to_i).max + 1).to_s
+  memos[id] = { 'title' => title, 'content' => content }
+  set_memos(FILE_PATH, memos)
+
+  redirect '/memos'
 end
 
 get '/edit' do
