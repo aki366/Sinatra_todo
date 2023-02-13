@@ -15,8 +15,9 @@ get '/' do
   "http://localhost:4567/[name].html"
 end
 
-get '/top' do
-  erb :top
+get '/memos' do
+  @memos = get_memos(FILE_PATH)
+  erb :index
 end
 
 get '/new' do
