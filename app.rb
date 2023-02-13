@@ -16,7 +16,7 @@ get '/new' do
   erb :new
 end
 
-get '/show' do
+get '/show/*' do
   erb :show
 end
 
