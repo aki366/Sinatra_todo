@@ -8,5 +8,9 @@
     <div>
       <p><%= @title %></p>
       <p><%= @content %></p>
+
+    <div class="create-memo-button">
+      <a class="btn btn-secondary" href="/memos/<%= params[:id] %>/edit">変更</a>
+    </div>
   </body>
 </html>
