@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'json'
+require "cgi/escape"
 
 FILE_PATH = 'public/memos.json'
 
@@ -36,9 +37,8 @@ get '/memos/:id' do
 end
 
 post '/memos' do
-  title = params[:title]
-  content = params[:content]
-
+  title = CGI.escapeHTML(params[:title])
+  content = CGI.escapeHTML(params[:content])
   memos = get_memos(FILE_PATH)
   id = (memos.keys.map(&:to_i).max + 1).to_s
   memos[id] = { 'title' => title, 'content' => content }
@@ -55,8 +55,8 @@ get '/memos/:id/edit' do
 end
 
 patch '/memos/:id' do
-  title = params[:title]
-  content = params[:content]
+  title = CGI.escapeHTML(params[:title])
+  content = CGI.escapeHTML(params[:content])
 
   memos = get_memos(FILE_PATH)
   memos[params[:id]] = { 'title' => title, 'content' => content }
