@@ -47,7 +47,10 @@ post '/memos' do
   redirect '/memos'
 end
 
-get '/edit' do
+get '/memos/:id/edit' do
+  memos = get_memos(FILE_PATH)
+  @title = memos[params[:id]]['title']
+  @content = memos[params[:id]]['content']
   erb :edit
 end
 
