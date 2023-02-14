@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # For plain Ruby scripts
 group :development do
@@ -8,8 +8,8 @@ group :development do
 end
 
 # gem "rails"
-gem 'sinatra'
-gem 'webrick'
-gem 'sinatra-contrib'
-gem 'redcarpet'
 gem 'erb_lint', require: false
+gem 'redcarpet'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'webrick'
