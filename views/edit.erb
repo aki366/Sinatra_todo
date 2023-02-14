@@ -23,5 +23,21 @@
           <input type="submit" value="変更">
         </div>
       </form>
+
+    <div class="input-memo-outline">
+      <link rel="stylesheet" type="text/css" href="/css/common_input_form.css">
+      <form action="/memos" method="post">
+        <div class="create-memo-">
+          <input type="text" id="title" name="title" class="input-memo-title">
+        </div>
+        <div>
+          <textarea id="content" name="content" class="input-memo-content"></textarea>
+        </div>
+        <div class="execute-button">
+          <link rel="stylesheet" type="text/css" href="/css/new.css">
+          <input type="submit" value="保存" class="create-memo-button">
+        </div>
+      </form>
+    </div>
   </body>
 </html>
