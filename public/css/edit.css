@@ -1,0 +1,8 @@
+.edit-memo-button {
+  margin: 0;
+  background-color: #ffcb5b;
+  padding: 5px 40px;
+  border: solid 1px;
+  border-radius: 0.5rem;
+  border-color: #a9a9a9;
+}

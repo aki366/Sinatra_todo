@@ -8,34 +8,18 @@
   </head>
 
   <body>
-    <div>
-      <form action="/memos/<%= params[:id] %>" method="post">
-        <div class="edit-memo-title">
-          <label for="title" class="form-label"></label>
-          <input type="text" id="title" name="title" value="<%= @title %>" class="form-control">
-        </div>
-        <div class="edit-memo-content">
-          <label for="content" class="form-label"></label>
-          <textarea id="content" name="content" class="form-control"><%= @content %></textarea>
-        </div>
-        <div class="btn btn-edit">
-          <input type="hidden" name="_method" value="patch">
-          <input type="submit" value="変更">
-        </div>
-      </form>
-
     <div class="input-memo-outline">
       <link rel="stylesheet" type="text/css" href="/css/common_input_form.css">
-      <form action="/memos" method="post">
-        <div class="create-memo-">
-          <input type="text" id="title" name="title" class="input-memo-title">
+      <form action="/memos/<%= params[:id] %>" method="post">
+        <div>
+          <input type="text" id="title" name="title" value="<%= @title %>" class="input-memo-title">
         </div>
         <div>
-          <textarea id="content" name="content" class="input-memo-content"></textarea>
+          <textarea id="content" name="content" class="input-memo-content"><%= @content %></textarea>
         </div>
         <div class="execute-button">
-          <link rel="stylesheet" type="text/css" href="/css/new.css">
-          <input type="submit" value="保存" class="create-memo-button">
+          <link rel="stylesheet" type="text/css" href="/css/edit.css">
+          <input type="submit" value="変更" class="edit-memo-button">
         </div>
       </form>
     </div>
