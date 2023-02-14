@@ -8,19 +8,21 @@
   </head>
 
   <body>
-    <div>
+    <div class="input-memo-outline">
       <p><%= @title %></p>
       <p><%= @content %></p>
 
-    <div class="btn btn-edit">
-      <a href="/memos/<%= params[:id] %>/edit">変更</a>
-    </div>
+      <a div class="new-memo-button" href="/memos/<%= params[:id] %>/edit">変更</a>
+        <link rel="stylesheet" type="text/css" href="/css/edit.css">
+      </a>
 
-    <form action="/memos/<%= params[:id] %>" method="post">
-      <div class="btn btn-delete">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="削除">
-      </div>
-    </form>
+      <form action="/memos/<%= params[:id] %>" method="post">
+        <div class="execute-button">
+          <link rel="stylesheet" type="text/css" href="/css/show.css">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="削除" class="delete-memo-button">
+        </div>
+      </form>
+    </div>
   </body>
 </html>
