@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'json'
-require "cgi/escape"
+require 'cgi/escape'
 
 FILE_PATH = 'public/memos.json'
 
