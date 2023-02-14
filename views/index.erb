@@ -2,13 +2,12 @@
 <html lang="ja">
   <head>
     <h2>メモアプリ</h2>
-  </head>
-
-  <body>
     <div class="create-memo-button">
       <a class="btn btn-secondary" href="/memos/new">追加</a>
     </div>
+  </head>
 
+  <body>
     <ul>
       <% @memos.each do |id, post| %>
         <li>
