@@ -71,6 +71,12 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.26.0)
       parser (>= 3.2.1.0)
+    rubocop-fjord (0.2.4)
+      rubocop (>= 1.0)
+      rubocop-performance
+    rubocop-performance (1.16.0)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     sinatra (3.0.5)
@@ -97,6 +103,7 @@ PLATFORMS
 DEPENDENCIES
   erb_lint
   redcarpet
+  rubocop-fjord
   sinatra
   sinatra-contrib
   webrick

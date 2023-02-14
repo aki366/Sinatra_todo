@@ -2,6 +2,11 @@
 
 source "https://rubygems.org"
 
+# For plain Ruby scripts
+group :development do
+  gem 'rubocop-fjord', require: false
+end
+
 # gem "rails"
 gem 'sinatra'
 gem 'webrick'
