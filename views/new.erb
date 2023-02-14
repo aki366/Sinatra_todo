@@ -11,14 +11,15 @@
     <div class="create-memo">
       <link rel="stylesheet" type="text/css" href="/css/new.css">
       <form action="/memos" method="post">
-        <div class="create-memo-title">
-          <input type="text" id="title" name="title" class="form-control">
-        </div>
-        <div class="create-memo-content">
-          <label for="content" class="form-label"></label>
-          <textarea id="content" name="content" class="form-control"></textarea>
-        </div>
+      <div>
+        <input type="text" id="title" name="title" class="create-memo-title">
+      </div>
+      <div>
+        <textarea id="content" name="content" class="create-memo-content"></textarea>
+      </div>
+      <div>
         <input type="submit" value="保存" class="create-memo-button">
+      </div>
       </form>
     </div>
   </body>
