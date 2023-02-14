@@ -8,11 +8,12 @@
   </head>
 
   <body>
-    <div class="input-memo-outline">
+    <div class="show-memo">
       <p><%= @title %></p>
       <p><%= @content %></p>
-
-      <a div class="new-memo-button" href="/memos/<%= params[:id] %>/edit">変更</a>
+    </div>
+    <div class="actions-items">
+      <a div class="edit-memo-button" href="/memos/<%= params[:id] %>/edit">変更</a>
         <link rel="stylesheet" type="text/css" href="/css/edit.css">
       </a>
 

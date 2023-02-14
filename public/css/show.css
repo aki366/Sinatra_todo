@@ -6,3 +6,14 @@
   border-radius: 0.5rem;
   border-color: #a9a9a9;
 }
+
+.actions-items {
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+}
+
+.show-memo {
+  margin: 0;
+  padding: 0px 10px;
+}
