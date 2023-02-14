@@ -4,7 +4,13 @@
 }
 
 .create-memo-title {
-  padding: 5px 0px;
+  background-color: #f4f4f4;
+  border: solid 1px;
+  border-radius: 0.5rem;
+  border-color: #a9a9a9;
+  margin: 5px 0px;
+  width: 80%;
+  height: 30px;
 }
 
 .create-memo-content {
