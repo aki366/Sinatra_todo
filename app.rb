@@ -14,10 +14,7 @@ def set_memos(file_path, memos)
 end
 
 get '/' do
-  "hello!!"
-  "http://localhost:4567/top.html"
-  "http://localhost:4567/path/to"
-  "http://localhost:4567/[name].html"
+  erb :top
 end
 
 get '/memos' do
