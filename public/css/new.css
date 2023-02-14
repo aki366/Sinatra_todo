@@ -1,28 +1,3 @@
-.create-memo {
-  padding: 5px 10px;
-
-}
-
-.create-memo-title {
-  background-color: #f4f4f4;
-  border: solid 1px;
-  border-radius: 0.5rem;
-  border-color: #a9a9a9;
-  margin: 5px 0px;
-  width: 80%;
-  height: 30px;
-}
-
-.create-memo-content {
-  background-color: #f4f4f4;
-  border: solid 1px;
-  border-radius: 0.5rem;
-  border-color: #a9a9a9;
-  margin: 5px 0px;
-  width: 80%;
-  height: 200px;
-}
-
 .create-memo-button {
   background-color: #f4f4f4;
   padding: 5px 40px;
