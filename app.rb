@@ -38,11 +38,12 @@ end
 post '/memos' do
   title = CGI.escapeHTML(params[:title])
   content = CGI.escapeHTML(params[:content])
-  memos = get_memos(FILE_PATH)
-  id = (memos.keys.map(&:to_i).max + 1).to_s
-  memos[id] = { 'title' => title, 'content' => content }
-  set_memos(FILE_PATH, memos)
-
+  if title != ''
+    memos = get_memos(FILE_PATH)
+    id = (memos.keys.map(&:to_i).max + 1).to_s
+    memos[id] = { 'title' => title, 'content' => content }
+    set_memos(FILE_PATH, memos)
+  end
   redirect '/memos'
 end
 
@@ -56,11 +57,11 @@ end
 patch '/memos/:id' do
   title = CGI.escapeHTML(params[:title])
   content = CGI.escapeHTML(params[:content])
-
-  memos = get_memos(FILE_PATH)
-  memos[params[:id]] = { 'title' => title, 'content' => content }
-  set_memos(FILE_PATH, memos)
-
+  if title != ''
+    memos = get_memos(FILE_PATH)
+    memos[params[:id]] = { 'title' => title, 'content' => content }
+    set_memos(FILE_PATH, memos)
+  end
   redirect "/memos/#{params[:id]}"
 end
 
