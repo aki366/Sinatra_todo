@@ -6,4 +6,7 @@
   border: solid 1px;
   border-radius: 0.5rem;
   border-color: #a9a9a9;
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
 }
