@@ -37,4 +37,4 @@ bundle exec ruby app.rb
 ## 6. ブラウザからアクセス
 下記のURLへアクセスして頂くとmemoアプリが使用できます。
 <br>
-http://localhost:4567
+http://localhost:4567/memos
