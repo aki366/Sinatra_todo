@@ -9,8 +9,8 @@
 
   <body>
     <div class="show-memo">
-      <p><%= @title %></p>
-      <p><%= @content %></p>
+      <p><%= CGI.escapeHTML(@title) %></p>
+      <p><%= CGI.escapeHTML(@content) %></p>
     </div>
     <div class="actions-items">
       <a div class="edit-memo-button" href="/memos/<%= params[:id] %>/edit">変更</a>
