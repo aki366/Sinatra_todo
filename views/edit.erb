@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <div class="container">
+      <h1 class="page-content-header_title">メモアプリ</h1>
+      <link rel="stylesheet" type="text/css" href="/css/app.css">
+    </div>
+  </head>
+
+  <body>
+    <div class="input-memo-outline">
+      <link rel="stylesheet" type="text/css" href="/css/common_input_form.css">
+      <form action="/memos/<%= params[:id] %>" method="post">
+        <div>
+          <input type="text" id="title" name="title" value="<%= @title %>" class="input-memo-title">
+        </div>
+        <div>
+          <textarea id="content" name="content" class="input-memo-content"><%= @content %></textarea>
+        </div>
+        <div class="execute-button">
+          <link rel="stylesheet" type="text/css" href="/css/edit.css">
+          <input type="hidden" name="_method" value="patch">
+          <input type="submit" value="変更" class="edit-memo-button">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

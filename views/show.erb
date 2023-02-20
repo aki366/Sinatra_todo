@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <div class="container">
+      <h1 class="page-content-header_title">メモアプリ</h1>
+      <link rel="stylesheet" type="text/css" href="/css/app.css">
+    </div>
+  </head>
+
+  <body>
+    <div class="show-memo">
+      <p><%= CGI.escapeHTML(@title) %></p>
+      <p><%= CGI.escapeHTML(@content) %></p>
+    </div>
+    <div class="actions-items">
+      <a div class="edit-memo-button" href="/memos/<%= params[:id] %>/edit">変更</a>
+        <link rel="stylesheet" type="text/css" href="/css/edit.css">
+      </a>
+
+      <form action="/memos/<%= params[:id] %>" method="post">
+        <div class="execute-button">
+          <link rel="stylesheet" type="text/css" href="/css/show.css">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="削除" class="delete-memo-button">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

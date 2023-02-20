@@ -1,0 +1,12 @@
+.container {
+  height: 35px;
+  display: flex;
+  padding: 5px 10px;
+  margin: 0px;
+}
+
+.page-content-header_title {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+}
